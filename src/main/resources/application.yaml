@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gerador-playlists
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gerador_playlists
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name=org: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    showsql: true
+    properties:
+      hibernate:
+        format_sql: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
